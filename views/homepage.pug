@@ -1,0 +1,19 @@
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    h1 Destinations
+    a(href='/update-cobj') Add to this table
+    table
+      thead
+        tr
+          th Name
+          th Country
+          th Best Season
+      tbody
+        each item in data
+          tr
+            td= item.properties.name
+            td= item.properties.country
+            td= item.properties.best_season
